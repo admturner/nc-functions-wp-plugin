@@ -5,14 +5,16 @@
  * Description: A short and sweet plugin adding functionality specific to the Nursing Clio blog project.
  * Author: Adam Turner
  * Author URI: http://adamturner.org
- * Version: 0.1
+ * Version: 0.2
  * 
  * CONTENTS
+ * 	- Initialize
  *  - Role Capabilities
+ * 	- Google Analytics
  *
  * @package WordPress
  * @package NursingClioHelperFunctions
- * @version 0.1
+ * @version 0.2
  * @author  Adam Turner
  * @copyright Copyright (c) 2015, Adam Turner, GPL 2.0+
  * @link https://github.com/admturner/nc-functions-wp-plugin
@@ -26,28 +28,39 @@
 /**** INITIALIZE ****/
 function nc_helper_functions_activate() {
 
-    // This only needs to run once per site to work, so let's do that
+    // This only needs to run once per site to work, so let's do that.
     nc_edit_author_caps();
 
 }
 register_activation_hook( __FILE__, 'nc_helper_functions_activate' );
 
-
-/************* ROLE CAPABILITIES ******************/
 /**
  * Remove some capabilities from author role
  * 
- * Removing the cabaility 'publish_posts' from the Author
+ * Remove the cabaility 'publish_posts' from the Author
  * role, to prevent accidently publishing before approval
  * from a Nursing Clio Editor.
  *
- * @since v0.5
  * @uses WP_Role::remove_cap()
- * @todo Make sure init is the best hook to use.
+ * @since 0.1
  */
 function nc_edit_author_caps() {
 	$role = get_role( 'author' );
 	$role->remove_cap( 'publish_posts' );
 }
+
+/**
+ * Add Google Analytics script to head
+ * 
+ * Hook into wp_head() to insert Google Analytics
+ * script for tracking and data.
+ *
+ * @uses wp_head()
+ * @since 0.2
+ */
+function nc_add_google_analytics() {
+    echo '<!-- Google Analytics code here -->';
+}
+add_action('wp_head', 'nc_add_google_analytics');
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

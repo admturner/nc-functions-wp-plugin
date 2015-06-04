@@ -1,0 +1,43 @@
+# NC HELPER FUNCTION CHANGE LOG & HISTORY
+
+This is a super-light WordPress plugin to serve up some custom functions for
+the [Nursing Clio](http://nursingclio.org) website.
+
+Author: Adam Turner
+URL: https://github.com/admturner/nc-functions-wp-plugin
+
+<!-- 
+Changelog formatting (http://semver.org/): 
+
+## Major.MinorAddorDeprec.Bugfix YYYY-MM-DD
+
+### Todo (for upcoming changes)
+### Security (in case of fixed vulnerabilities)
+### Fixed (for any bug fixes)
+### Changed (for changes in existing functionality)
+### Added (for new features)
+### Deprecated (for once-stable features removed in upcoming releases)
+### Removed (for deprecated features removed in this release)
+-->
+
+---
+
+## 0.2 Unreleased
+
+### Changed
+
+- Clean up metadata on nc_edit_author_caps function
+
+### Added
+
+- CHANGELOG.md
+- LICENSE.md
+- Git management files
+- Function to add Google Analytics script to the < head > using the wp_head() action
+
+## 0.1 initial 2015-06-02
+
+### Added
+
+- First creation of initial file nc-functions.php
+- Function to remove the cabaility 'publish_posts' from the Author role
