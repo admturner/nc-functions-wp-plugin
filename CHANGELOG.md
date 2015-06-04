@@ -1,7 +1,6 @@
-# NC HELPER FUNCTION CHANGE LOG & HISTORY
+# NC HELPER FUNCTIONS CHANGE LOG & HISTORY
 
-This is a super-light WordPress plugin to serve up some custom functions for
-the [Nursing Clio](http://nursingclio.org) website.
+This is a super-light WordPress plugin to serve up some custom functions for the [Nursing Clio](http://nursingclio.org) website.
 
 Author: Adam Turner
 URL: https://github.com/admturner/nc-functions-wp-plugin
@@ -34,6 +33,7 @@ Changelog formatting (http://semver.org/):
 - LICENSE.md
 - Git management files
 - Function to add Google Analytics script to the < head > using the wp_head() action
+- README.md
 
 ## 0.1 initial 2015-06-02
 
