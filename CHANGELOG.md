@@ -34,6 +34,7 @@ Changelog formatting (http://semver.org/):
 - Git management files
 - Function to add Google Analytics script to the < head > using the wp_head() action
 - README.md
+- CONTRIBUTING.md
 
 ## 0.1 initial 2015-06-02
 
