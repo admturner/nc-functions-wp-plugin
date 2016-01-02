@@ -25,6 +25,12 @@
  * @todo Make more robust (see http://solislab.com/blog/plugin-activation-checklist/)
  */
 
+// Make sure we don't expose any info if called directly
+if ( !function_exists( 'add_action' ) ) {
+	echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
+	exit;
+}
+
 /**** INITIALIZE ****/
 function nc_helper_functions_activate() {
 
@@ -72,4 +78,3 @@ function nc_add_google_analytics() { ?>
 <?php }
 add_action('wp_head', 'nc_add_google_analytics', 15);
 
-/* DON'T DELETE THIS CLOSING TAG */ ?>

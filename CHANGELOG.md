@@ -21,7 +21,7 @@ Changelog formatting (http://semver.org/):
 
 ---
 
-## 0.2 Unreleased
+## 0.3 Unreleased
 
 ### Changed
 
@@ -29,12 +29,19 @@ Changelog formatting (http://semver.org/):
 
 ### Added
 
+- Add function to prevent direct access of PHP scripts
+- index.php to prevent directory index access
 - CHANGELOG.md
 - LICENSE.md
 - Git management files
 - Function to add Google Analytics script to the < head > using the wp_head() action
 - README.md
 - CONTRIBUTING.md
+- Add Google Analytics script to the analytics function
+
+### Removed
+
+- Remove extra PHP close tag
 
 ## 0.1 initial 2015-06-02
 
