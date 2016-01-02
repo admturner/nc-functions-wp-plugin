@@ -21,7 +21,7 @@ Changelog formatting (http://semver.org/):
 
 ---
 
-## 0.3 Unreleased
+## 0.3 2016-01-02
 
 ### Changed
 

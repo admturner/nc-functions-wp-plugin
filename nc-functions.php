@@ -5,12 +5,13 @@
  * Description: A short and sweet plugin adding functionality specific to the Nursing Clio blog project.
  * Author: Adam Turner
  * Author URI: http://adamturner.org
- * Version: 0.2
+ * Version: 0.3
  * 
  * CONTENTS
  * 	- Initialize
  *  - Role Capabilities
  * 	- Google Analytics
+ *  - Custom list authors
  *
  * @package WordPress
  * @package NursingClioHelperFunctions
@@ -19,7 +20,6 @@
  * @copyright Copyright (c) 2015, Adam Turner, GPL 2.0+
  * @link https://github.com/admturner/nc-functions-wp-plugin
  * @license http://www.gnu.org/licenses/gpl.html
-
  * 
  * @todo Add function_exists() wrappers
  * @todo Make more robust (see http://solislab.com/blog/plugin-activation-checklist/)

@@ -1,4 +1,4 @@
-# Nursing Clio Helper Functions 0.2
+# Nursing Clio Helper Functions 0.3
 
 This is a super-light WordPress plugin to serve up some custom functions for the [Nursing Clio](http://nursingclio.org) website.
 
