@@ -29,7 +29,7 @@ Changelog formatting (http://semver.org/):
 
 ### Added
 
-- Add function to prevent direct access of PHP scripts
+- Function to prevent direct access of PHP scripts
 - index.php to prevent directory index access
 - CHANGELOG.md
 - LICENSE.md
@@ -48,4 +48,4 @@ Changelog formatting (http://semver.org/):
 ### Added
 
 - First creation of initial file nc-functions.php
-- Function to remove the cabaility 'publish_posts' from the Author role
+- Function to remove the capability 'publish_posts' from the Author role
