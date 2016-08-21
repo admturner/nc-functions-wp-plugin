@@ -1,6 +1,6 @@
 # NC HELPER FUNCTIONS CHANGE LOG & HISTORY
 
-This is a super-light WordPress plugin to serve up some custom functions for the [Nursing Clio](http://nursingclio.org) website.
+This is a super-light WordPress plugin to serve up some custom functions for the [Nursing Clio](https://nursingclio.org) website.
 
 Author: Adam Turner
 URL: https://github.com/admturner/nc-functions-wp-plugin
@@ -20,6 +20,18 @@ Changelog formatting (http://semver.org/):
 -->
 
 ---
+
+## 0.4.0 2016-08-20
+
+### Added
+
+- Functions to add meta box to new/edit post page to add a "ready to publish" check
+
+## 0.3.1 2016-02-20
+
+### Changed
+
+- Switch to https protocol
 
 ## 0.3 2016-01-02
 

@@ -4,8 +4,8 @@
  * Plugin URI: https://github.com/admturner/nc-functions-wp-plugin
  * Description: A short and sweet plugin adding functionality specific to the Nursing Clio blog project.
  * Author: Adam Turner
- * Author URI: http://adamturner.org
- * Version: 0.3
+ * Author URI: https://adamturner.org
+ * Version: 0.4.0
  * 
  * CONTENTS
  * 	- Initialize
@@ -78,3 +78,60 @@ function nc_add_google_analytics() { ?>
 <?php }
 add_action('wp_head', 'nc_add_google_analytics', 15);
 
+/**
+ * Add Meta Box to Post Pages
+ *
+ * Custom meta box(s) for the WP Admin area.
+ * 
+ * @since 0.4.0
+ */
+function nc_posts_meta_box() {
+	# Add meta box to add/edit posts page
+	add_meta_box(
+		'nc-posts-meta',
+		esc_html__('NC: Verify Ready to Publish', 'nursingclio'), 
+		'nc_publish_check_fn',
+		'post',
+		'side',
+		'high'
+	);
+}
+add_action( 'add_meta_boxes', 'nc_posts_meta_box' );
+
+/**
+ * Post ready-to-publish verify
+ * 
+ * Add a checkbox to verify whether the post is ready to be published
+ * or not. Hide/disable "Publish" button if marked as not ready to 
+ * publish.
+ * 
+ * @since 0.4.0
+*/
+function nc_publish_check_fn() {
+	?>
+	<div id="nc-verify-ready-to-publish" class="tabs-panel">
+		<?php if ( get_post_status() != 'publish' ) { ?>
+			<p><?php _e('Select when ready to publish.'); ?></p>
+			<ul id="nc-verify-check" class="categorychecklist form-no-clear">
+				<li id="nc-pub-check" class="popular-category">
+					<label class="selectit" for="nc_verify">
+						<input value="1" type="checkbox" name="nc_verify" id="nc_verify"> <?php _e('Ready to publish'); ?>
+					</label>
+				</li>
+			</ul>
+		<?php } else { ?>
+			<p><?php _e('Post published.'); ?></p>
+		<?php } ?>
+	</div>
+	<?php // We're not modifying the actual post at all, so no need to save meta
+}
+
+function nc_load_publishcheck_js() {
+	$currentscreen = get_current_screen();
+	if ( $currentscreen->id != 'post' || get_post_status() == 'publish' ) {
+		return;
+	}
+	wp_register_script( 'nc_admin_script', plugin_dir_url(__FILE__) . 'library/js/nc-scripts.js', array ('jquery'), '', true );
+	wp_enqueue_script( 'nc_admin_script' );
+}
+add_action( 'admin_enqueue_scripts', 'nc_load_publishcheck_js' );

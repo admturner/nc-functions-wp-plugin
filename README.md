@@ -1,6 +1,6 @@
-# Nursing Clio Helper Functions 0.3
+# Nursing Clio Helper Functions 0.4.0
 
-This is a super-light WordPress plugin to serve up some custom functions for the [Nursing Clio](http://nursingclio.org) website.
+This is a super-light WordPress plugin to serve up some custom functions for the [Nursing Clio](https://nursingclio.org) website.
 
 These could certainly go in a theme's functions.php file, but by separating them like this we separate global theme functionality from site-specific functionality (such as removing publishing capabilities from authors), which may not be desirable on other installations. If you notice bugs, holes, or Things That Could Be Better, I'm entirely open to contribution. Just let me know (and see the [Contributing](https://github.com/admturner/nc-functions-wp-plugin/blob/master/CONTRIBUTING.md) guidelines. :)
 
